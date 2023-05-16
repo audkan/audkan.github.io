@@ -16,15 +16,13 @@ body {
 /* Add a black background color to the top navigation */
 .mainnav {
   background-color: white;
-  max-height: 100px;
+  height: 100px;
   position: relative;
   width: 100%;
   z-index: 1;
   box-sizing: border-box;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  padding: 30px 40px 30px 40px;
+ 
   pointer-events: auto;
   display: flex;
   flex-wrap: nowrap;
