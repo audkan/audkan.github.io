@@ -13,6 +13,16 @@ body {
   background-color: #f6f0ea;
 }
 
+a {
+  text-decoration: none;
+
+  color: #FD7940;
+}
+
+a:hover {
+  color: #FCAE68;
+}
+
 /* Add a black background color to the top navigation */
 .mainnav {
   background-color: white;
@@ -22,7 +32,7 @@ body {
   z-index: 1;
   box-sizing: border-box;
   padding: 30px 40px 30px 40px;
- 
+
   pointer-events: auto;
   display: flex;
   flex-wrap: nowrap;
@@ -34,7 +44,7 @@ body {
   width: auto;
   max-width: 100%;
   max-height: 50px;
-  padding-right: 3em;
+  padding-right: 2.2em;
 }
 
 /* Style the links inside the navigation bar */
@@ -96,21 +106,33 @@ body {
 
 #page-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
-
 #intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  padding: 3.3vmax 12vw;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+#bio {
   padding-bottom: 5.5rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    padding: 3.3vmax 12vw;
-    margin: 0 auto;
-    box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  padding: 3.3vmax 12vw;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+#bio-text {
+  font-size: 24px;
 }
 
 #intro-portrait {
@@ -142,4 +164,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1485px) {
+
+  #bio-text,
+  #intro-text small {
+    font-size: 18px;
+  }
+
+  #intro-text {
+    font-size: 28px;
+  }
+
+  #intro {
+    padding: 3.3vmax 4vw;
+  }
 }

@@ -3,6 +3,37 @@
 
 <head>
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- Script to render emojis as Twemojis -->
+    <script>
+        window.onload = function () {
+            // Parses the document body and    
+            // inserts <img> tags in place of Unicode Emojis    
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' } // This is to specify to Twemoji to use SVGs and not PNGs
+            );
+
+        }
+
+    </script>
+
+    <!-- CSS configurations to tweak how the Twemojis are displayed -->
+    <style>
+        img.emoji {
+            /* Since we are using SVGs, you have to change the width using CSS */
+            width: .6em;
+
+            /* 
+            This is to make the emojis feel like actual emojis to 
+            the user and they won't act like images. This makes the emojis
+            non-reactive to any mouse events such as dragging, 
+            hovering, clicking etc. Makes it feel like its actual text.
+            */
+            pointer-events: none;
+        }
+    </style>
+
 </head>
 <header>
     <div class="mainnav">
@@ -29,10 +60,10 @@
 
 <body>
     <div id="page-container">
-        <div id="intro">
+        <div id="intro" class="row">
 
-            <img id="intro-portrait" src="assets/AudPortrait.png" alt=”Audrey Kan>
-            <div id="intro-text">
+            <img id="intro-portrait" class="column" src="assets/AudPortrait.png" alt=”Audrey Kan>
+            <div id="intro-text"  class="column">
                 <p>Hi, I'm Audrey!</p>
                 <p>Self-taught artist and designer.<br>
                     Owner of Studio Aud.<br>
@@ -41,15 +72,31 @@
                 <!-- <small>This site holds a variety of content— both professional and personal— so you can learn more about
                     who I am and
                     what I love to do ☻</small> -->
-                    <br>
-                    <small>audreynicolekan@gmail.com</small><br>
-                    <small>@oddreeezy</small><br>
-                    <small>@studio.aud</small><br>
-                    <small>studioaud.com</small>
-            </div>
+             
+                <small>✉️ <a href="mailto:audreynicolekan@gmail.com">audreynicolekan@gmail.com</a></small><br>
+                <small>🌉 <a href="https://www.instagram.com/studio.aud/">@studio.aud</a></small><br>
+                <small>🌐 <a href="https://studioaud.com/">studioaud.com</a></small>
+
+               
+                    <p>Education</p>
+                    <div id="bio-text">
+                        <p>
+                            B.S. in Computer Science - Seattle University (2020)
+                            <br>
+                            Study Abroad - The University of Auckland (2018)
+                            <br>
+                            Study Abroad - University of Hull (2017)
+                            <br>
+                            Lowell High School (2016)
+                        </p>
+                    </div>
+            
 
 
         </div>
+        
+       
+    </div>
         <footer id="footer">
             <p>© Audrey Nicole Kan</p>
         </footer>
